@@ -1,0 +1,14 @@
+D:\Work\TFS\bairesdev_challenge\CC .NET\BairesDev_Challenge\BairesDev_Challenge\bin\Debug\netcoreapp2.1\BairesDev_Challenge.deps.json
+D:\Work\TFS\bairesdev_challenge\CC .NET\BairesDev_Challenge\BairesDev_Challenge\bin\Debug\netcoreapp2.1\BairesDev_Challenge.runtimeconfig.json
+D:\Work\TFS\bairesdev_challenge\CC .NET\BairesDev_Challenge\BairesDev_Challenge\bin\Debug\netcoreapp2.1\BairesDev_Challenge.runtimeconfig.dev.json
+D:\Work\TFS\bairesdev_challenge\CC .NET\BairesDev_Challenge\BairesDev_Challenge\bin\Debug\netcoreapp2.1\BairesDev_Challenge.dll
+D:\Work\TFS\bairesdev_challenge\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\BairesDev_Challenge.csprojAssemblyReference.cache
+D:\Work\TFS\bairesdev_challenge\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\BairesDev_Challenge.csproj.CoreCompileInputs.cache
+D:\Work\TFS\bairesdev_challenge\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\BairesDev_Challenge.RazorAssemblyInfo.cache
+D:\Work\TFS\bairesdev_challenge\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\BairesDev_Challenge.RazorAssemblyInfo.cs
+D:\Work\TFS\bairesdev_challenge\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\BairesDev_Challenge.AssemblyInfoInputs.cache
+D:\Work\TFS\bairesdev_challenge\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\BairesDev_Challenge.AssemblyInfo.cs
+D:\Work\TFS\bairesdev_challenge\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\BairesDev_Challenge.RazorTargetAssemblyInfo.cache
+D:\Work\TFS\bairesdev_challenge\CC .NET\BairesDev_Challenge\BairesDev_Challenge\bin\Debug\netcoreapp2.1\BairesDev_Challenge.pdb
+D:\Work\TFS\bairesdev_challenge\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\BairesDev_Challenge.dll
+D:\Work\TFS\bairesdev_challenge\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\BairesDev_Challenge.pdb
