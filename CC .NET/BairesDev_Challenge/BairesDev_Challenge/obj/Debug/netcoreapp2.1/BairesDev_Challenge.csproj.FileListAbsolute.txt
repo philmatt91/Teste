@@ -36,7 +36,7 @@ C:\Users\ThCapela\Documents\GitHub\Teste\CC .NET\BairesDev_Challenge\BairesDev_C
 C:\Users\ThCapela\Documents\GitHub\Teste\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\BairesDev_Challenge.TagHelpers.input.cache
 C:\Users\ThCapela\Documents\GitHub\Teste\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\BairesDev_Challenge.TagHelpers.output.cache
 C:\Users\ThCapela\Documents\GitHub\Teste\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\BairesDev_Challenge.RazorCoreGenerate.cache
-C:\Users\ThCapela\Documents\GitHub\Teste\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\Razor\Views\Clients\ClientList.cshtml.g.cs
 C:\Users\ThCapela\Documents\GitHub\Teste\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\BairesDev_Challenge.RazorTargetAssemblyInfo.cs
 C:\Users\ThCapela\Documents\GitHub\Teste\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\BairesDev_Challenge.Views.pdb
 C:\Users\ThCapela\Documents\GitHub\Teste\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\BairesDev_Challenge.csproj.CopyComplete
+C:\Users\ThCapela\Documents\GitHub\Teste\CC .NET\BairesDev_Challenge\BairesDev_Challenge\obj\Debug\netcoreapp2.1\Razor\Views\Client\ClientList.cshtml.g.cs
