@@ -124,6 +124,12 @@ namespace BairesDev_Challenge.Controllers
             }
         }
 
+        /*[Route("api/[controller]/[action]}")]
+        public ActionResult ListClients()
+        {
+            return View();
+        }*/
+
         [Route("api/[controller]/[action]/{top?}")]
         public JsonResult TopClients(int? top)
         {
