@@ -54,7 +54,7 @@ namespace BairesDev_Challenge
             app.UseMvc(routes =>
             {
                 routes                    
-                    .MapRoute(name: "api", template: "api/{controller}/{action}/{id?}");
+                    .MapRoute(name: "Route", template: "{controller}/{action}/{id?}");
             });        
         }
     }
