@@ -138,5 +138,11 @@ namespace BairesDev_Challenge.Controllers
                 return Json(clients);
             }
         }
+
+        [Route("[controller]/[action]")]
+        public ActionResult List()
+        {
+            return View();
+        }
     }
 }
