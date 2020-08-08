@@ -43,7 +43,7 @@ namespace BairesDev_Challenge.Controllers
             }
         }
 
-        private List<Client> SortClients(int? top = null)
+        private List<Client> SortClients()
         {
             string filePath = _configSettings.JsonFilePath;
             string json = _fileTools.ReadFile(filePath);
@@ -101,7 +101,7 @@ namespace BairesDev_Challenge.Controllers
             {
                 client = new Client(personId, firstName, lastName, currentRole, country, industry, numberOfRecommendations, numberOfConnections);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 _logger.LogError(e.Message);
                 throw new Exception("Could not create a new Client, please verify if all parameters are provided.");
@@ -125,18 +125,19 @@ namespace BairesDev_Challenge.Controllers
         }
 
         [Route("api/[controller]/[action]/{top?}")]
-        public JsonResult TopClients(int? top)
+        public JsonResult TopClients(int? top, bool? fullData)
         {
-            List<Client> clients = SortClients(top);
-            List<ClientId> clientIds = _jsonTools.ConvertLists<Client, ClientId>(clients);
+            List<Client> clients = SortClients();
             if (top.HasValue && top > 0)
             {
-                return Json(clientIds.Take((int)top));
+                clients = clients.Take(top.Value).ToList();
+                if (!(fullData.HasValue && fullData.Value))
+                {
+                    List<ClientId> clientIds = _jsonTools.ConvertLists<Client, ClientId>(clients);
+                    return Json(clientIds);
+                }
             }
-            else
-            {
-                return Json(clients);
-            }
+            return Json(clients);
         }
 
         [Route("[controller]/[action]")]

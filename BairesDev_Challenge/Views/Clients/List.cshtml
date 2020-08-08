@@ -1,17 +1,20 @@
 ﻿<html>
-<body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--<script src="\Scripts\jquery-3.5.1.min.js"></script>-->
-    <script type="text/javascript">
-        //PrimeiraFuncao();
-        $("#divPhil").hide();
+<head>    
+    <script src="\Scripts\jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">  
+        $(function () {
+            $("#divPhil").text("TESTE EL TESTE MI TESTES");
+        });
+        
         function PrimeiraFuncao() {
             var variavel = 'TIPO COLOMBIA';
             alert(variavel);
         }
     </script>
+</head>
+<body>
     <div id="divPhil">
-        TESTE EL TESTE MI TESTES
+        
     </div>
 </body>
 </html>

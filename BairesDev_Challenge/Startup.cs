@@ -47,10 +47,9 @@ namespace BairesDev_Challenge
             else
             {
                 app.UseHsts();
-            }            
-
+            }
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
-
             app.UseMvc(routes =>
             {
                 routes                    
