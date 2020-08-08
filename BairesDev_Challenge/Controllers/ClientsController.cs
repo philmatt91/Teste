@@ -124,7 +124,7 @@ namespace BairesDev_Challenge.Controllers
             }
         }
 
-        [Route("api/[controller]/[action]/{top?}")]
+        [Route("api/[controller]/[action]/{top?}/{fullData?}")]
         public JsonResult TopClients(int? top, bool? fullData)
         {
             List<Client> clients = SortClients();
@@ -138,7 +138,7 @@ namespace BairesDev_Challenge.Controllers
                 }
             }
             return Json(clients);
-        }
+        }        
 
         [Route("[controller]/[action]")]
         public ActionResult List()
