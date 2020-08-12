@@ -1,28 +1,32 @@
 ﻿<html>
-<head>    
+<head>
+
     <script src="\Scripts\jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="~/Scripts/Style.css">
     <script type="text/javascript">
         $(function () {
-            var texto = "<h1>MESSI VAI CHORAR HOJE</h1>";
-            //$("#divPhil").text("TESTE EL TESTE MI TESTES");
-           // $("#divPhil").append(texto);
+            /*var texto = "<h1>MESSI VAI CHORAR HOJE</h1>";
+            $("#divPhil").text("TESTE EL TESTE MI TESTES");
+            $("#divPhil").append(texto);*/
+            //PreencherTabela();            
         });
 
-       
-        
         function PreencherTabela() {
             var tabela = $("#tablePhil");
+            var cliente = $("#numClientes").val(); //prompt("Insira a quantidade de clientes", 30);                                    
             tabela.empty();
             $.ajax({
                 type: "GET",
-                url: '/api/Clients/topclients/30/true',
+                url: '/api/Clients/topclients/' + cliente + '/true',
                 //data: {parametro:"fudeu"},
                 //contentType: "application/json; charset=utf-8",
                 success: function (result) {
-                    alert(JSON.stringify(result));                    
+                    //alert(JSON.stringify(result));
                     var html = "";
+                    html = "<tr> <th>Nome</th> <th>Sobrenome</th> <th>Nacionalidade</th> <th>Recomendações</th> </tr>";
                     for (i = 0; i < result.length; i++) {
-                        html += "<tr><td>" + result[i].firstName + "</td></tr>";
+                        html += "<tr> <td>" + result[i].firstName + "</td> <td>" + result[i].lastName + "</td> <td>" + result[i].country + "</td>" +
+                            "<td>" + result[i].numberOfRecommendations + "</td ></tr >";
                     }
                     tabela.append(html);
                 },
@@ -30,17 +34,32 @@
             });
         }
     </script>
+
+    <style type="text/css">
+        /*body {
+            background-color: lightblue;
+
+        }*/
+
+    </style>
 </head>
 <body>
     <div id="divPhil">
-        <table>
-            <thead>
+        <div class="filtro" align="center" id="botao">
+            <label>Quantidade de clientes</label>
+            <input id="numClientes" value="30" type="number" style="width:50px;"/>
+            <button onclick="PreencherTabela()">Procurar</button>
+        </div>
 
-            </thead>
-            <tbody id="tablePhil">
 
-            </tbody>
-        </table>
-    </div>
+            <table id="customers">
+                <thead>
+
+                </thead>
+                <tbody id="tablePhil">
+                </tbody>
+            </table>
+        </div>
 </body>
+
 </html>
