@@ -13,7 +13,6 @@
                 type: "GET",
                 url: '/api/Clients/topclients/' + cliente + '/true',
                 //data: {parametro:"fudeu"},
-                //contentType: "application/json; charset=utf-8",
                 success: function (result) {
                     //alert(JSON.stringify(result));
                     var html = "";
@@ -35,7 +34,7 @@
         <div class="container" id="filtro">
             <div class="center">
                 <label>Quantidade de clientes:</label>
-                <input id="numClientes" value="30" type="number" style="width:50px;" />
+                <input id="numClientes" value="30" type="number">
                 <input type="button" class="button button1" value="Procurar" onclick="PreencherTabela()">
             </div>         
         </div>

@@ -25,6 +25,7 @@ table {
     left: 50%;
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+    border-radius: 4px;
 }
 
 .center {
@@ -44,19 +45,21 @@ table {
     left: 50%;
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+    background-color: aliceblue;
+    text-transform: capitalize
 }
 
 #customers td, #customers th {
-    border: 1px solid #ddd;
+    border: 1px solid black;
     padding: 8px;
 }
 
 #customers tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: ghostwhite;
 }
 
 #customers tr:hover {
-    background-color: #ddd;
+    background-color: lightsteelblue;
 }
 
 #customers th {
@@ -68,13 +71,16 @@ table {
 }
 
 #numClientes {
-    padding: 3px 3px;
+    padding: 3px 1px;
+    width: 50px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-family: 'Segoe UI';
     font-size: 16px;
     margin: 4px 2px;
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 .button {
@@ -89,15 +95,18 @@ table {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    transition: all 0.5s;
 }
 
 .button1 {
     background-color: white;
     color: black;
-    border: 2px solid #555555;
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 .button1:hover {
-    background-color: #555555;
+    background-color: cornflowerblue;
     color: white;
+    border: 2px solid black;
 }
