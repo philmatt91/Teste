@@ -35,22 +35,16 @@
         }
     </script>
 
-    <style type="text/css">
-        /*body {
-            background-color: lightblue;
-
-        }*/
-
-    </style>
 </head>
 <body>
     <div id="divPhil">
-        <div class="filtro" align="center" id="botao">
-            <label>Quantidade de clientes</label>
-            <input id="numClientes" value="30" type="number" style="width:50px;"/>
-            <button onclick="PreencherTabela()">Procurar</button>
+        <div class="container" id="filtro">
+            <div class="center">
+                <label>Quantidade de clientes:</label>
+                <input id="numClientes" value="30" type="number" style="width:50px;" />
+                <input type="button" class="button button1" value="Procurar" onclick="PreencherTabela()">
+            </div>         
         </div>
-
 
             <table id="customers">
                 <thead>
