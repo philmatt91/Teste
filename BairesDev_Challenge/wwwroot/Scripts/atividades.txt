@@ -1,0 +1,6 @@
+1) deixar o filtro sempre visível e esconder a tabela
+2) Filtrar adicionalmente por a letra inicial do cliente
+3) CLicar no nome do cliente e embaixo da tabela aparecer os nomes do mesmo
+4)Tivesse em conta o ID do cliente
+5)melhorar estilização da página anterior e posterior
+6)esconder os botões quando não tiver mais página posterior ou anterior

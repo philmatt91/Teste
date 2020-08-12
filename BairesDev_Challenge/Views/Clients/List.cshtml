@@ -4,24 +4,52 @@
     <script src="\Scripts\jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="~/Scripts/Style.css">
     <script type="text/javascript">
+        var pagina = 0;
+        var elempagina = 10;
+        var maxpaginas = 0;
+        var result;
+
+        $(function () {
+            $("#customers").hide();
+        });
+
+        function capit(string) {
+            return string[0].toUpperCase() + string.substring(1);
+        }
+
+        function mudaPagina(incremento) {
+            var auxiliar = pagina + incremento;
+            if (auxiliar >= 0 && auxiliar <= maxpaginas) {
+                pagina = auxiliar;
+                PreencherTabela();
+            }            
+        }
 
         function PreencherTabela() {
             var tabela = $("#tablePhil");
-            var cliente = $("#numClientes").val(); //prompt("Insira a quantidade de clientes", 30);                                    
             tabela.empty();
+            var html = "";
+            html = "";
+            var inicial = elempagina * pagina;
+            maxpaginas = Math.ceil((result.length / 10)) - 1;
+            for (i = inicial; (i < inicial + elempagina) && i < result.length; i++) {
+                html += "<tr> <td>" + capit(result[i].firstName) + "</td> <td>" + capit(result[i].lastName) + "</td> <td>" + capit(result[i].country) + "</td>" +
+                    "<td>" + result[i].numberOfRecommendations + "</td > <td>" + result[i].numberOfConnections + "</td></tr >";
+            }
+            tabela.append(html);
+            $("#customers").show();
+        }
+
+        function ChamarServico() {                        
+            var cliente = $("#numClientes").val(); //prompt("Insira a quantidade de clientes", 30);                                                
             $.ajax({
                 type: "GET",
                 url: '/api/Clients/topclients/' + cliente + '/true',
                 //data: {parametro:"fudeu"},
-                success: function (result) {
+                success: function (resultado) {
+                    result = resultado;
+                    PreencherTabela();
                     //alert(JSON.stringify(result));
-                    var html = "";
-                    html = "<tr> <th>Nome</th> <th>Sobrenome</th> <th>Nacionalidade</th> <th>Recomendações</th> </tr>";
-                    for (i = 0; i < result.length; i++) {
-                        html += "<tr> <td>" + result[i].firstName + "</td> <td>" + result[i].lastName + "</td> <td>" + result[i].country + "</td>" +
-                            "<td>" + result[i].numberOfRecommendations + "</td ></tr >";
-                    }
-                    tabela.append(html);
                 },
                 //dataType: "json"
             });
@@ -35,16 +63,21 @@
             <div class="center">
                 <label>Quantidade de clientes:</label>
                 <input id="numClientes" value="30" type="number">
-                <input type="button" class="button button1" value="Procurar" onclick="PreencherTabela()">
+                <input type="button" class="button button1" value="Procurar" onclick="ChamarServico()">
             </div>         
         </div>
 
             <table id="customers">
                 <thead>
-
+                    <tr> <th>Nome</th> <th>Sobrenome</th> <th>Nacionalidade</th> <th>Recomendações</th> <th>Conexões</th> </tr>
                 </thead>
                 <tbody id="tablePhil">
                 </tbody>
+                <tfoot>
+                    <tr><td colspan="3" style="width:70%;text-align:left"><button onclick="mudaPagina(-1)">Pág Anterior</button></td>
+                    <td colspan="2" style="width:30%;text-align:right;"><button onclick="mudaPagina(1)">Prox página</button></td></tr>
+                    
+                </tfoot>
             </table>
         </div>
 </body>
