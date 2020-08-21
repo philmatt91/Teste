@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "Clients/List",
+      "launchUrl": "Test/MyTest",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "BairesDev_Challenge": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/Clients/topclients",
+      "launchUrl": "Test/MyTest",
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
